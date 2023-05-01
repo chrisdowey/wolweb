@@ -1,9 +1,9 @@
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-orange)](http://golang.org) [![proc-arch](https://img.shields.io/badge/Arch-x86%20%7C%20AMD64%20%7C%20ARM5%20%7C%20ARM7-blue)](http://golang.org) [![os](https://img.shields.io/badge/OS-Linux%20%7C%20Windows%20%7C%20Darwin-yellowgreen)](http://golang.org)
 
 
-# Web interface for sending Wake-on-lan (magic packet)
+# Web interface for sending Wake-on-LAN (WoL magic packet)
 
-A Golang based HTTP server which will send a Wake-on-lan package (magic packet) on local network. The request can be sent using web interface or directly using HTTP request with mapped device name in the URL. The only computing device I have running 24x7 is handy-dandy Raspberry Pi 4 (4gb) with docker containers. All other devices like server, laptop and NAS as powered only when I need them. I needed a way to easily turn them on specifically when trying to automate things like nightly builds.
+A Golang based HTTP server which will send a Wake-on-LAN package (magic packet) on local network. The request can be sent using web interface or directly using HTTP request with mapped device name in the URL. The only computing device I have running 24x7 is handy-dandy Raspberry Pi 4 (4gb) with docker containers. All other devices like server, laptop and NAS as powered only when I need them. I needed a way to easily turn them on specifically when trying to automate things like nightly builds.
 
 I use this application behind NGINX web proxy which is secured with HTTPS certificate. It has no authentication, but it is a home network and the reason I built this was to have no authentication. I have the same functionality provided in my home router, but I have to login and go through several clicks. Also, this app runs as docker image so even if it is hacked, it reduces the attack surface.
 
@@ -19,7 +19,7 @@ Things I use this for:
 
 ## Bootstrap UI with JS Grid for editing data
 
-![Screenshot](wolweb_ui.png)
+![screenshot-apcupsd-2023 05 01-15_16_43](https://user-images.githubusercontent.com/41088895/235533502-40c9a150-0960-486b-a0c1-2c17882a1aa3.png)
 
 The UI features CRUD operation implemented using [js-grid.com](https://github.com/tabalinas/jsgrid) plugin. 
 
