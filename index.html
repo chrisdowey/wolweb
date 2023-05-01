@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Wake-on-lan Web</title>
+  <title>Wake-on-LAN Web</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
         <div id="GridDevices"></div>
         <hr>
         <p>
-        <h3>Wake-up directly using HTTP Request</h3>
+        <h3>Wake using HTTP Request</h3>
         <b>{{$.VDir}}/wake/<span class="text-info">&lt;DeviceName&gt;</span></b>
 
         <b>Returns a JSON Object</b>
@@ -30,17 +30,17 @@
         <pre>
 {
   "success":true,
-  "message":"Sent magic packet to device Server with Mac 34:E6:D7:33:12:71 on Broadcast IP 192.168.1.255:9",
+  "message":"Sent magic packet to device with MAC 00:00:00:00:00:00 on Broadcast IP 192.168.110.255:9",
   "error":null
 }
         </pre>
         </p>
         <dl class="dl-horizontal">
-          <dt>success</dt>
-          <dd>True or False if the WakeOnLan packet was sent</dd>
-          <dt>message</dt>
+          <dt>Success</dt>
+          <dd>True or False if the WakeOnLan Packet was sent</dd>
+          <dt>Message</dt>
           <dd>Message as string what happened</dd>
-          <dt>error</dt>
+          <dt>Error</dt>
           <dd>Encoded JSON Object from GOLANG Error Object</dd>
         </dl>
         </p>
@@ -50,7 +50,7 @@
             href="https://github.com/sameerdhoot/wolweb">https://github.com/sameerdhoot/wolweb</a>
         </p>
         <p class="m-0">
-          <small>Build with <span class="fa fa-heart text-danger" aria-hidden="true"></span> by Sameer Dhoot, <span
+          <small>Built with <span class="fa fa-heart text-danger" aria-hidden="true"></span> by Sameer Dhoot, <span
               class="fab fa-github"></span> <a href="https://github.com/sameerdhoot">https://github.com/sameerdhoot</a></small>
         </p>
         <p class="m-0">

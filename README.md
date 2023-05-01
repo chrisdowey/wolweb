@@ -3,9 +3,9 @@
 
 # Web interface for sending Wake-on-lan (magic packet)
 
-A GoLang based HTTP server which will send a Wake-on-lan package (magic packet) on local network. The request can be send using web interface or directly using HTTP request with mapped device name in the URL. The only computing device I have running 24x7 is handy-dandy Raspberry Pi 4 (4gb) with docker containers. All other devices like server, laptop and NAS as powered only when I need them. I needed a way to easily turn them on specifically when trying to automate things like nightly builds.
+A Golang based HTTP server which will send a Wake-on-lan package (magic packet) on local network. The request can be sent using web interface or directly using HTTP request with mapped device name in the URL. The only computing device I have running 24x7 is handy-dandy Raspberry Pi 4 (4gb) with docker containers. All other devices like server, laptop and NAS as powered only when I need them. I needed a way to easily turn them on specifically when trying to automate things like nightly builds.
 
-I use this application behind NGINX web proxy which is secured with HTTPS certificate. It has no authentication, but it is home network and the reason I built this was to have no authentication. I have the same functionality provided in my home router, but I have to login and go through several clicks. Also, this app runs as docker image so even if it is hacked, it reduces the attack surface.
+I use this application behind NGINX web proxy which is secured with HTTPS certificate. It has no authentication, but it is a home network and the reason I built this was to have no authentication. I have the same functionality provided in my home router, but I have to login and go through several clicks. Also, this app runs as docker image so even if it is hacked, it reduces the attack surface.
 
 I have bookmarked direct link to device(s) on my browsers to wake them using single HTTP call for ease of access.
 
