@@ -24,7 +24,6 @@ FROM alpine
 WORKDIR /wolweb
 COPY --from=builder /wolweb/index.html .
 COPY --from=builder /wolweb/wolweb .
-# COPY --from=builder /wolweb/devices.json .
 COPY --from=builder /wolweb/config.json .
 COPY --from=builder /wolweb/static ./static
 COPY --from=builder /wolweb/start.sh /
@@ -36,4 +35,3 @@ ARG WOLWEBPORT=8089
 EXPOSE ${WOLWEBPORT}
 
 CMD ["/start.sh"]
-
