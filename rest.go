@@ -6,11 +6,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/gorilla/mux"
 )
 
-//restWakeUpWithDeviceName - REST Handler for Processing URLS /virtualdirectory/apipath/<deviceName>
+// restWakeUpWithDeviceName - REST Handler for Processing URLS /virtualdirectory/apipath/<deviceName>
 func wakeUpWithDeviceName(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
@@ -31,8 +32,9 @@ func wakeUpWithDeviceName(w http.ResponseWriter, r *http.Request) {
 
 		// Get Device from List
 		for _, c := range appData.Devices {
-			if c.Name == deviceName {
-
+			// hostnames are case-insensitive so == is not a good test
+			// if c.Name == deviceName {
+			if strings.EqualFold(c.Name, deviceName) {
 				// We found the Devicename
 				if err := SendMagicPacket(c.Mac, c.BroadcastIP, ""); err != nil {
 					// We got an internal Error on SendMagicPacket
