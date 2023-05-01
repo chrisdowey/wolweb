@@ -1,6 +1,6 @@
 package main
 
-//HTTPResponseObject Data structure for sending the API call status
+// HTTPResponseObject Data structure for sending the API call status
 type HTTPResponseObject struct {
 	Success     bool   `json:"success"`
 	Message     string `json:"message"`
