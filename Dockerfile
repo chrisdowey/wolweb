@@ -1,4 +1,4 @@
-# docker build -t wolweb .
+# docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -f Dockerfile -t bnhf/wolweb . --push --no-cache
 FROM golang:1.14-alpine AS builder
 
 LABEL org.label-schema.vcs-url="https://github.com/bnhf/wolweb" \
