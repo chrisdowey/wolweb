@@ -17,7 +17,7 @@ RUN apk update && apk upgrade && \
     go get -d github.com/ilyakaznacheev/cleanenv
 
 # Build Source Files
-RUN go build -o wolweb . 
+RUN go build -o wolweb .
 
 # Create 2nd Stage final image
 FROM alpine
@@ -26,7 +26,7 @@ COPY --from=builder /wolweb/index.html .
 COPY --from=builder /wolweb/wolweb .
 COPY --from=builder /wolweb/config.json .
 COPY --from=builder /wolweb/static ./static
-COPY --from=builder /wolweb/start.sh /
+COPY start.sh /
 
 RUN chmod +x /start.sh
 
